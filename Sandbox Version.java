@@ -47,10 +47,7 @@ class HugeFungusFeatureMixin {
 					boolean bl5 = bl2 && bl3;
 					boolean bl6 = k < j + 3;
 					mutable.set(pos, m, k, n2);
-					// if (!HugeFungusFeature.isReplaceable(world, mutable, false)) continue;
-					// if (config.planted && !world.getBlockState((BlockPos)mutable.down()).isAir()) {
-					//	world.breakBlock(mutable, true);
-					//}
+					// don't sue me mojang idk where i found this code
 					if (bl6) {
 						if (bl4) continue;
 						this.placeWithOptionalVines(world, random, mutable, config.hatState, bl);
