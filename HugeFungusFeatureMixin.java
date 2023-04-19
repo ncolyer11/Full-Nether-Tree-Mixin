@@ -20,17 +20,17 @@ class HugeFungusFeatureMixin {
 	@ModifyArg(method = "generateHat", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/gen/feature/HugeFungusFeature;placeHatBlock(Lnet/minecraft/world/WorldAccess;Lnet/minecraft/util/math/random/Random;Lnet/minecraft/world/gen/feature/HugeFungusFeatureConfig;Lnet/minecraft/util/math/BlockPos$Mutable;FFF)V")
 			, index = 4)
 	private float increaseFungusShroomBloat(float decorationChance) {
-		return 1;
+		return 0;
 	}
 
 	@ModifyArg(method = "generateHat", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/gen/feature/HugeFungusFeature;placeHatBlock(Lnet/minecraft/world/WorldAccess;Lnet/minecraft/util/math/random/Random;Lnet/minecraft/world/gen/feature/HugeFungusFeatureConfig;Lnet/minecraft/util/math/BlockPos$Mutable;FFF)V")
 			, index = 5)
 	private float increaseFungusWartBloat(float generationChance) {
-		return 0; // change around the shroom and wart bloat values to vary what you see, note shrooms generate 'on top' of shrooms
+		return 1; // change around the shroom and wart bloat values to vary what you see, note shrooms generate 'on top' of shrooms
 	}
 
 	@Redirect(method = "placeWithOptionalVines", at = @At(value = "INVOKE", target = "Lnet/minecraft/util/math/random/Random;nextFloat()F"))
 	private float maxVRM(Random instance) {
-		return 0.0F; // change to 0.15 or above for a 0% chance of any vines. uniform distribution between 0 and 0.15 for a value between 0% and 100%
+		return 0.0F; // change to 0.15 or above for a 0% chance of any vines.
 	}
 }
