@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.fabricmc.example.rtf.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "HugeFungusFeatureMixin"
+  ],
+  "client": [
+    "HugeFungusFeatureMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
